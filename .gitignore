@@ -1,0 +1,7 @@
+.env
+./.env
+access.log
+./access.log
+requests.rest
+/node_modules
+package-lock.json
