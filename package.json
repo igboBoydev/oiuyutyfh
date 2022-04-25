@@ -1,0 +1,50 @@
+{
+  "name": "emergingwealth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "migrate": "npx sequelize db:migrate",
+    "seed": "npx sequelize db:seed:all",
+    "reset": "npx sequelize db:migrate:undo:all && npm run migrate && npm run seed",
+    "git-add": "git add .",
+    "git-commit": "git commit -m \"latest update\"",
+    "git-push": "git push",
+    "git-deploy": "npm run git-add && npm run git-commit && npm run git-push",
+    "deploy": "npm run git-deploy",
+    "update": "sudo git pull && sudo pm2 stop eavc && sudo pm2 start eavc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "helmet": "^5.0.2",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
+    "mysql2": "^2.3.3",
+    "nodemailer": "^6.7.3",
+    "nodemailer-express-handlebars": "^5.0.0",
+    "paginate-info": "^1.0.4",
+    "passport": "^0.5.2",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "sequelize": "^6.18.0",
+    "socket.io": "^4.4.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "sequelize-cli": "^6.4.1"
+  }
+}
